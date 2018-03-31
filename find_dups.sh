@@ -1,12 +1,10 @@
 #!/bin/sh
-set -x
+#set -x
 if [ $# -ne 2 ]; then
 	echo "Usage: $0 DIR name|cont [rm_script_name])"
         exit 1
 fi
 
-run_dir="$PWD"
-base_dir="$1"
 
 if [ -z "$3"]
 then	
