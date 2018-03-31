@@ -6,11 +6,11 @@ if [ $# -lt 2 ]; then
 fi
 
 which uname 1>/dev/null || echo "what's happening?"
-which awk 1>/dev/null || echo "no awk in " 'uname'
-which md5sum 1>/dev/null || echo "no md5sum in " 'uname'
-which find 1>/dev/null || echo "no find in " 'uname'
-which sort 1>/dev/null || echo "no sort in " 'uname'
-which uniq 1>/dev/null || echo "no uniq in " 'uname'
+which awk 1>/dev/null || echo "no awk in " `uname`
+which md5sum 1>/dev/null || echo "no md5sum in " `uname`
+which find 1>/dev/null || echo "no find in " `uname`
+which sort 1>/dev/null || echo "no sort in " `uname`
+which uniq 1>/dev/null || echo "no uniq in " `uname`
 
 if [ -z "$3" ]
 then	
