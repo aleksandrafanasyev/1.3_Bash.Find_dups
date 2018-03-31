@@ -1,12 +1,18 @@
 #!/bin/sh
 #set -x
-if [ $# -ne 2 ]; then
+if [ $# -lt 2 ]; then
 	echo "Usage: $0 DIR name|cont [rm_script_name])"
         exit 1
 fi
 
+which uname 1>/dev/null || echo "what's happening?"
+which awk 1>/dev/null || echo "no awk in " 'uname'
+which md5sum 1>/dev/null || echo "no md5sum in " 'uname'
+which find 1>/dev/null || echo "no find in " 'uname'
+which sort 1>/dev/null || echo "no sort in " 'uname'
+which uniq 1>/dev/null || echo "no uniq in " 'uname'
 
-if [ -z "$3"]
+if [ -z "$3" ]
 then	
        	rm_script_name="$1"/rm_dup.sh
 else
